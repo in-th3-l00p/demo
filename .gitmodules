@@ -7,3 +7,6 @@
 [submodule "submodules/panoplia.defi"]
 	path = submodules/panoplia.defi
 	url = https://github.com/in-th3-l00p/panoplia.defi.git
+[submodule "submodules/panoplia.app"]
+	path = panoplia.app
+	url = https://github.com/https://github.com/in-th3-l00p/panoplia.app.git

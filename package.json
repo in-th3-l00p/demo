@@ -1,0 +1,17 @@
+{
+  "name": "panoplia-demo-root",
+  "private": true,
+  "scripts": {
+    "dev": "npm run setup --silent && npx concurrently -k -n mpc,app -c blue,magenta \"npm run dev:mpc\" \"npm run dev:app\"",
+    "dev:mpc": "cd submodules/panoplia.mpc && npm run dev",
+    "dev:app": "cd app && npx vite",
+    "setup": "npm run setup:env --silent && npm run setup:deps --silent",
+    "setup:env": "node scripts/setup-env.mjs",
+    "setup:deps": "node scripts/setup-deps.mjs",
+    "install:all": "cd submodules/panoplia.mpc && npm install && cd ../../app && npm install",
+    "build": "cd app && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
