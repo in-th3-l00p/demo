@@ -1,22 +1,25 @@
 # ── Stage 1: Build ────────────────────────────────────────────────
 FROM node:20-alpine AS builder
 
+RUN apk add --no-cache python3 make g++
+
 WORKDIR /build
 
-# ── Build submodule libraries (needed by web app as file: deps) ──
-COPY submodules/panoplia.peer/package.json submodules/panoplia.peer/package-lock.json submodules/panoplia.peer/
-COPY submodules/panoplia.peer/tsconfig.json submodules/panoplia.peer/tsup.config.ts submodules/panoplia.peer/
-COPY submodules/panoplia.peer/src submodules/panoplia.peer/src
-RUN cd submodules/panoplia.peer && npm ci && npm run build
+# ── Build panoplia.peer library (local copy in libs/) ────────────
+COPY libs/panoplia.peer/package.json libs/panoplia.peer/package-lock.json libs/panoplia.peer/
+COPY libs/panoplia.peer/tsconfig.json libs/panoplia.peer/tsup.config.ts libs/panoplia.peer/
+COPY libs/panoplia.peer/src libs/panoplia.peer/src
+RUN cd libs/panoplia.peer && npm ci --ignore-scripts && npm run build
 
-COPY submodules/panoplia.defi/package.json submodules/panoplia.defi/package-lock.json submodules/panoplia.defi/
-COPY submodules/panoplia.defi/tsconfig.json submodules/panoplia.defi/tsup.config.ts submodules/panoplia.defi/
-COPY submodules/panoplia.defi/src submodules/panoplia.defi/src
-RUN cd submodules/panoplia.defi && npm ci && npm run build
+# ── Build panoplia.defi library (local copy in libs/) ────────────
+COPY libs/panoplia.defi/package.json libs/panoplia.defi/package-lock.json libs/panoplia.defi/
+COPY libs/panoplia.defi/tsconfig.json libs/panoplia.defi/tsup.config.ts libs/panoplia.defi/
+COPY libs/panoplia.defi/src libs/panoplia.defi/src
+RUN cd libs/panoplia.defi && npm ci --ignore-scripts && npm run build
 
 # ── Build web app ────────────────────────────────────────────────
 COPY app/ app/
-RUN cd app && npm install --ignore-scripts && npx vite build
+RUN cd app && npm install && npx vite build
 
 # ── Stage 2: Serve with nginx ────────────────────────────────────
 FROM nginx:alpine

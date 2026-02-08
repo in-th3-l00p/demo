@@ -1,0 +1,54 @@
+{
+  "name": "panoplia.swap",
+  "version": "0.1.0",
+  "description": "React hooks & widget wrapper for LiFi SDK v3 — token discovery, swaps, bridges, and DeFi zaps",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "peerDependencies": {
+    "@tanstack/react-query": ">=5",
+    "react": ">=18",
+    "react-dom": ">=18",
+    "viem": ">=2",
+    "wagmi": ">=2"
+  },
+  "dependencies": {
+    "@lifi/sdk": "^3",
+    "@lifi/wallet-management": "^3",
+    "@lifi/widget": "^3"
+  },
+  "devDependencies": {
+    "@tanstack/react-query": "^5",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "jsdom": "^28.0.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "tsup": "^8",
+    "typescript": "^5.5",
+    "viem": "^2",
+    "vitest": "^4.0.18",
+    "wagmi": "^2"
+  },
+  "license": "MIT"
+}
