@@ -44,7 +44,7 @@ export default function WalletDetail() {
   if (loading) {
     return (
       <div className="flex items-center justify-center py-20">
-        <Loader2 className="w-8 h-8 text-indigo-400 animate-spin" />
+        <Loader2 className="w-8 h-8 text-purple-400 animate-spin" />
       </div>
     );
   }
@@ -53,7 +53,7 @@ export default function WalletDetail() {
     return (
       <div className="card text-center py-12">
         <p className="text-slate-400">Wallet not found</p>
-        <Link to="/wallets" className="text-indigo-400 text-sm mt-2 inline-block">
+        <Link to="/wallets" className="text-purple-400 text-sm mt-2 inline-block">
           Back to wallets
         </Link>
       </div>
@@ -65,8 +65,8 @@ export default function WalletDetail() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
-          <div className="w-14 h-14 bg-indigo-500/10 rounded-2xl flex items-center justify-center">
-            <Wallet className="w-7 h-7 text-indigo-400" />
+          <div className="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center">
+            <Wallet className="w-7 h-7 text-purple-400" />
           </div>
           <div>
             <div className="flex items-center gap-3">
@@ -87,7 +87,7 @@ export default function WalletDetail() {
       </div>
 
       {/* Balance */}
-      <div className="card bg-gradient-to-br from-indigo-600/10 to-transparent border-indigo-500/20">
+      <div className="card bg-gradient-to-br from-purple-600/10 to-transparent border-purple-500/20">
         <p className="text-sm text-slate-400 mb-1">Total Balance</p>
         <p className="text-3xl font-bold text-white">$0.00</p>
         <div className="flex gap-3 mt-4">
@@ -158,7 +158,7 @@ export default function WalletDetail() {
         <h2 className="text-sm font-medium text-slate-400 mb-3">Transactions</h2>
         {txLoading ? (
           <div className="card flex items-center justify-center py-8">
-            <Loader2 className="w-5 h-5 text-indigo-400 animate-spin" />
+            <Loader2 className="w-5 h-5 text-purple-400 animate-spin" />
           </div>
         ) : transactions.length === 0 ? (
           <div className="card text-center py-8">

@@ -73,7 +73,7 @@ export default function OnRamp() {
           {extensionStatus === 'needs_install' && 'Peer extension not installed'}
         </span>
         {extensionStatus !== 'ready' && (
-          <button className="text-xs text-indigo-400 hover:text-indigo-300 ml-auto">
+          <button className="text-xs text-purple-400 hover:text-purple-300 ml-auto">
             {extensionStatus === 'needs_install' ? 'Install' : 'Connect'}
           </button>
         )}
@@ -148,7 +148,7 @@ export default function OnRamp() {
                   onClick={() => setPaymentMethod(method.id)}
                   className={`flex flex-col items-center gap-1.5 p-3 rounded-lg border transition-colors ${
                     paymentMethod === method.id
-                      ? 'bg-indigo-500/10 border-indigo-500/30'
+                      ? 'bg-purple-500/10 border-purple-500/30'
                       : 'bg-slate-800 border-slate-700 hover:border-slate-600'
                   }`}
                 >
@@ -219,7 +219,7 @@ export default function OnRamp() {
             { step: '4', text: 'USDC is delivered to your wallet on-chain' },
           ].map(({ step, text }) => (
             <div key={step} className="flex items-center gap-3">
-              <div className="w-6 h-6 bg-indigo-500/10 rounded-full flex items-center justify-center text-xs font-medium text-indigo-400 shrink-0">
+              <div className="w-6 h-6 bg-purple-500/10 rounded-full flex items-center justify-center text-xs font-medium text-purple-400 shrink-0">
                 {step}
               </div>
               <p className="text-sm text-slate-400">{text}</p>

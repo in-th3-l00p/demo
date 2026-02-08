@@ -9,9 +9,12 @@
     "setup:env": "node scripts/setup-env.mjs",
     "setup:deps": "node scripts/setup-deps.mjs",
     "install:all": "cd submodules/panoplia.mpc && npm install && cd ../../app && npm install",
-    "build": "cd app && npm run build"
+    "build": "cd app && npm run build",
+    "test": "npx playwright test",
+    "test:ui": "npx playwright test --ui"
   },
   "devDependencies": {
+    "@playwright/test": "^1.58.2",
     "concurrently": "^9.1.0"
   }
 }

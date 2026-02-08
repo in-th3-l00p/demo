@@ -79,7 +79,7 @@ export default function Swap() {
               onChange={(e) => setFromAmount(e.target.value)}
             />
             <button className="flex items-center gap-2 bg-slate-700 hover:bg-slate-600 px-3 py-2 rounded-lg transition-colors">
-              <span className="w-6 h-6 bg-indigo-500/20 rounded-full flex items-center justify-center text-xs text-indigo-300">
+              <span className="w-6 h-6 bg-purple-500/20 rounded-full flex items-center justify-center text-xs text-purple-300">
                 {popularTokens.find((t) => t.symbol === fromToken)?.logo}
               </span>
               <span className="text-sm font-medium text-white">{fromToken}</span>
@@ -88,7 +88,7 @@ export default function Swap() {
           </div>
           <div className="flex justify-between mt-2 text-xs text-slate-500">
             <span>Balance: 0.00</span>
-            <button className="text-indigo-400 hover:text-indigo-300">MAX</button>
+            <button className="text-purple-400 hover:text-purple-300">MAX</button>
           </div>
         </div>
 
@@ -190,7 +190,7 @@ export default function Swap() {
               onClick={() => setToToken(token.symbol)}
               className={`px-3 py-1.5 rounded-lg text-sm border transition-colors ${
                 toToken === token.symbol
-                  ? 'bg-indigo-500/10 border-indigo-500/30 text-indigo-300'
+                  ? 'bg-purple-500/10 border-purple-500/30 text-purple-300'
                   : 'bg-slate-900 border-slate-800 text-slate-400 hover:border-slate-700'
               }`}
             >

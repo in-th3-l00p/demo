@@ -224,10 +224,10 @@ export default function Recovery() {
       </div>
 
       {/* How it works */}
-      <div className="card bg-gradient-to-br from-indigo-600/10 to-transparent border-indigo-500/20">
+      <div className="card bg-gradient-to-br from-purple-600/10 to-transparent border-purple-500/20">
         <div className="grid grid-cols-4 gap-3">
           {[
-            { icon: Key, color: 'text-indigo-400 bg-indigo-500/10', label: 'Split', desc: 'Vault key split via Shamir' },
+            { icon: Key, color: 'text-purple-400 bg-purple-500/10', label: 'Split', desc: 'Vault key split via Shamir' },
             { icon: Users, color: 'text-purple-400 bg-purple-500/10', label: 'Distribute', desc: 'Shares go to guardians' },
             { icon: Shield, color: 'text-amber-400 bg-amber-500/10', label: 'Collect', desc: 'K guardians approve' },
             { icon: Lock, color: 'text-emerald-400 bg-emerald-500/10', label: 'Restore', desc: 'Vault reconstructed' },
@@ -246,7 +246,7 @@ export default function Recovery() {
       {/* ═══════════ SECTION 1: SETUP ═══════════ */}
       <div className="space-y-4">
         <h2 className="text-lg font-semibold text-white flex items-center gap-2">
-          <span className="w-6 h-6 bg-indigo-500/20 rounded-full flex items-center justify-center text-xs font-bold text-indigo-400">1</span>
+          <span className="w-6 h-6 bg-purple-500/20 rounded-full flex items-center justify-center text-xs font-bold text-purple-400">1</span>
           Setup Recovery
         </h2>
 
@@ -263,7 +263,7 @@ export default function Recovery() {
 
         {selectedVault && configLoading && (
           <div className="card flex items-center justify-center py-8">
-            <Loader2 className="w-6 h-6 text-indigo-400 animate-spin" />
+            <Loader2 className="w-6 h-6 text-purple-400 animate-spin" />
           </div>
         )}
 
@@ -297,8 +297,8 @@ export default function Recovery() {
               <div className="space-y-2">
                 {recoveryConfig.guardians.map((g) => (
                   <div key={g.id} className="flex items-center gap-3 bg-slate-800 rounded-lg px-3 py-2.5">
-                    <div className="w-8 h-8 bg-indigo-500/10 rounded-full flex items-center justify-center">
-                      <Users className="w-4 h-4 text-indigo-400" />
+                    <div className="w-8 h-8 bg-purple-500/10 rounded-full flex items-center justify-center">
+                      <Users className="w-4 h-4 text-purple-400" />
                     </div>
                     <div className="flex-1 min-w-0">
                       <p className="text-sm text-white">{g.name || 'Guardian'}</p>
@@ -381,7 +381,7 @@ export default function Recovery() {
                   <button
                     type="button"
                     onClick={() => copyText(selectedVault, 'vault-setup')}
-                    className="mt-2 font-mono text-xs bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded flex items-center gap-1.5 text-indigo-400 transition-colors"
+                    className="mt-2 font-mono text-xs bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded flex items-center gap-1.5 text-purple-400 transition-colors"
                   >
                     {copied === 'vault-setup' ? <CheckCircle2 className="w-3 h-3 text-emerald-400" /> : <Copy className="w-3 h-3" />}
                     Vault: {selectedVault.slice(0, 20)}...
@@ -403,7 +403,7 @@ export default function Recovery() {
                       </div>
                     ))}
                   </div>
-                  <button type="button" onClick={addGuardian} className="mt-2 text-sm text-indigo-400 hover:text-indigo-300 flex items-center gap-1">
+                  <button type="button" onClick={addGuardian} className="mt-2 text-sm text-purple-400 hover:text-purple-300 flex items-center gap-1">
                     <Plus className="w-3.5 h-3.5" /> Add guardian
                   </button>
                 </div>
@@ -495,7 +495,7 @@ export default function Recovery() {
             {/* Progress bar */}
             <div className="bg-slate-800 rounded-full h-3 overflow-hidden">
               <div
-                className="bg-gradient-to-r from-purple-500 to-indigo-500 h-full rounded-full transition-all duration-500"
+                className="bg-gradient-to-r from-purple-500 to-violet-500 h-full rounded-full transition-all duration-500"
                 style={{ width: `${sharesNeeded > 0 ? (sharesCollected / sharesNeeded) * 100 : 0}%` }}
               />
             </div>
@@ -517,7 +517,7 @@ export default function Recovery() {
                 <p className="text-xs text-slate-500 mb-2">Send this link to your guardians:</p>
                 <button
                   onClick={() => copyText(guardianPageUrl(), 'guardian-link')}
-                  className="font-mono text-xs bg-slate-700 hover:bg-slate-600 px-3 py-2 rounded-lg flex items-center gap-2 text-indigo-400 w-full transition-colors break-all text-left"
+                  className="font-mono text-xs bg-slate-700 hover:bg-slate-600 px-3 py-2 rounded-lg flex items-center gap-2 text-purple-400 w-full transition-colors break-all text-left"
                 >
                   {copied === 'guardian-link' ? <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" /> : <ExternalLink className="w-4 h-4 shrink-0" />}
                   <span className="truncate">{guardianPageUrl()}</span>

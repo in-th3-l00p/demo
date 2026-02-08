@@ -34,7 +34,7 @@ export default function Dashboard() {
       </div>
 
       {/* Portfolio card */}
-      <div className="card bg-gradient-to-br from-indigo-600/20 via-slate-900 to-slate-900 border-indigo-500/20">
+      <div className="card bg-gradient-to-br from-purple-600/20 via-slate-900 to-slate-900 border-purple-500/20">
         <div className="flex items-center justify-between mb-1">
           <span className="text-sm text-slate-400">Total Portfolio</span>
           <TrendingUp className="w-4 h-4 text-emerald-400" />
@@ -79,7 +79,7 @@ export default function Dashboard() {
       <div>
         <div className="flex items-center justify-between mb-3">
           <h2 className="text-sm font-medium text-slate-400">Your Wallets</h2>
-          <Link to="/create-wallet" className="text-sm text-indigo-400 hover:text-indigo-300 flex items-center gap-1">
+          <Link to="/create-wallet" className="text-sm text-purple-400 hover:text-purple-300 flex items-center gap-1">
             <Plus className="w-3.5 h-3.5" />
             New
           </Link>
@@ -87,7 +87,7 @@ export default function Dashboard() {
 
         {isLoading ? (
           <div className="card flex items-center justify-center py-12">
-            <Loader2 className="w-6 h-6 text-indigo-400 animate-spin" />
+            <Loader2 className="w-6 h-6 text-purple-400 animate-spin" />
           </div>
         ) : vaults.length === 0 ? (
           <div className="card text-center py-12">
@@ -110,8 +110,8 @@ export default function Dashboard() {
                 className="card flex items-center justify-between hover:border-slate-700 transition-colors"
               >
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 bg-indigo-500/10 rounded-xl flex items-center justify-center">
-                    <Wallet className="w-5 h-5 text-indigo-400" />
+                  <div className="w-10 h-10 bg-purple-500/10 rounded-xl flex items-center justify-center">
+                    <Wallet className="w-5 h-5 text-purple-400" />
                   </div>
                   <div>
                     <h3 className="font-medium text-white">{vault.name}</h3>

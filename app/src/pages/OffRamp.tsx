@@ -141,7 +141,7 @@ export default function OffRamp() {
                   onClick={() => toggleMethod(method.id)}
                   className={`px-3 py-1.5 rounded-lg text-sm border transition-colors ${
                     selectedMethods.includes(method.id)
-                      ? 'bg-indigo-500/10 border-indigo-500/30 text-indigo-300'
+                      ? 'bg-purple-500/10 border-purple-500/30 text-purple-300'
                       : 'bg-slate-800 border-slate-700 text-slate-500 hover:border-slate-600'
                   }`}
                 >

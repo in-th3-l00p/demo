@@ -65,7 +65,7 @@ export default function CreateWallet() {
       {/* Info cards */}
       <div className="grid grid-cols-3 gap-3 mb-8">
         <div className="card py-4 text-center">
-          <Key className="w-5 h-5 text-indigo-400 mx-auto mb-2" />
+          <Key className="w-5 h-5 text-purple-400 mx-auto mb-2" />
           <p className="text-xs text-slate-400">Split Key</p>
           <p className="text-sm font-medium text-white mt-0.5">2-of-2</p>
         </div>
@@ -107,7 +107,7 @@ export default function CreateWallet() {
 
       {step === 'creating' && (
         <div className="card text-center py-12">
-          <Loader2 className="w-10 h-10 text-indigo-400 animate-spin mx-auto mb-4" />
+          <Loader2 className="w-10 h-10 text-purple-400 animate-spin mx-auto mb-4" />
           <h3 className="text-lg font-medium text-white">Initializing MPC ceremony...</h3>
           <p className="text-sm text-slate-400 mt-2">
             Setting up the key generation session
@@ -118,9 +118,9 @@ export default function CreateWallet() {
       {step === 'keygen' && (
         <div className="card text-center py-12">
           <div className="relative w-16 h-16 mx-auto mb-4">
-            <div className="absolute inset-0 border-2 border-indigo-500 border-t-transparent rounded-full animate-spin" />
+            <div className="absolute inset-0 border-2 border-purple-500 border-t-transparent rounded-full animate-spin" />
             <div className="absolute inset-2 border-2 border-purple-500 border-b-transparent rounded-full animate-spin" style={{ animationDirection: 'reverse', animationDuration: '1.5s' }} />
-            <Key className="w-6 h-6 text-indigo-400 absolute inset-0 m-auto" />
+            <Key className="w-6 h-6 text-purple-400 absolute inset-0 m-auto" />
           </div>
           <h3 className="text-lg font-medium text-white">Key Generation in Progress</h3>
           <p className="text-sm text-slate-400 mt-2 max-w-sm mx-auto">

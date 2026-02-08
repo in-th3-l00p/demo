@@ -120,7 +120,7 @@ export default function Bridge() {
                   onClick={() => setSelectedBridge(i)}
                   className={`w-full flex items-center justify-between p-3 rounded-lg border transition-colors text-left ${
                     selectedBridge === i
-                      ? 'bg-indigo-500/10 border-indigo-500/30'
+                      ? 'bg-purple-500/10 border-purple-500/30'
                       : 'bg-slate-800 border-slate-700 hover:border-slate-600'
                   }`}
                 >

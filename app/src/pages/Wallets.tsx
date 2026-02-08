@@ -21,7 +21,7 @@ export default function Wallets() {
 
       {isLoading ? (
         <div className="card flex items-center justify-center py-16">
-          <Loader2 className="w-8 h-8 text-indigo-400 animate-spin" />
+          <Loader2 className="w-8 h-8 text-purple-400 animate-spin" />
         </div>
       ) : vaults.length === 0 ? (
         <div className="card text-center py-16">
@@ -43,8 +43,8 @@ export default function Wallets() {
               to={`/wallets/${vault.id}`}
               className="card flex items-center gap-4 hover:border-slate-700 transition-colors"
             >
-              <div className="w-12 h-12 bg-indigo-500/10 rounded-xl flex items-center justify-center shrink-0">
-                <Wallet className="w-6 h-6 text-indigo-400" />
+              <div className="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center shrink-0">
+                <Wallet className="w-6 h-6 text-purple-400" />
               </div>
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2">
