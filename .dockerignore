@@ -1,0 +1,13 @@
+node_modules
+app/node_modules
+submodules/panoplia.mpc/node_modules
+submodules/panoplia.mpc/data
+submodules/panoplia.peer/node_modules
+submodules/panoplia.defi/node_modules
+panoplia.app
+*.md
+.git
+.gitmodules
+tests
+submodules/panoplia.mpc/tests
+playwright.config.ts
